@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="35dp"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textTitre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="-11dp"
+        android:layout_marginEnd="11dp"
+        android:text="   Coût du voyage"
+        android:textAlignment="textStart"
+        android:textColor="@color/red"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:drawableRightCompat="@drawable/auto" />
+
+9    <TextView
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textTitre"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:padding="6dp"
+        android:text="2022-06-27"
+        android:textAlignment="center"
+        android:textColor="#333333"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textEssence"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/date"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:padding="6dp"
+        android:text="Type d’essence"
+        android:textStyle="bold"
+        android:textAlignment="textStart"
+        android:textColor="@color/red"
+        android:textSize="18sp" />
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textEssence"
+        android:layout_centerInParent="false"
+        android:paddingStart="10dp"
+        android:paddingTop="10dp"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:paddingBottom="10dp">
+
+        <RadioButton
+            android:id="@+id/dieselBtn"
+            android:layout_width="113dp"
+            android:layout_height="51dp"
+            android:background="@drawable/drapp"
+            android:text="Diesel"
+            android:textColorHighlight="#ED1111"
+            android:textColorLink="#F40B0B"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/gazBtn"
+            android:layout_width="113dp"
+            android:layout_height="51dp"
+            android:background="@drawable/drapp"
+            android:text="Gazoline"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/editTextDistance"
+        android:layout_width="154dp"
+        android:layout_height="56dp"
+        android:layout_below="@id/radio_group"
+        android:layout_marginTop="-7dp"
+        android:background="@drawable/drapp"
+        android:ems="10"
+        android:hint="Distance"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:inputType="textPersonName"
+        android:paddingStart="20dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="15dp" />
+
+    <EditText
+        android:id="@+id/editTextPerformance"
+        android:layout_width="164dp"
+        android:layout_height="56dp"
+        android:layout_below="@id/editTextDistance"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-57dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/drapp"
+        android:hint="Performance"
+        android:inputType="textPersonName"
+        android:paddingStart="20dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="20dp"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:paddingBottom="15dp" />
+
+    <EditText
+        android:id="@+id/editTextPrix"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_below="@id/editTextPerformance"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/drapp"
+        android:ems="10"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:hint="Prix de l'essence"
+        android:inputType="textPersonName"
+        android:paddingStart="20dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="15dp" />
+
+    <TextView
+        android:id="@+id/textCoût"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextPrix"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="center"
+        android:padding="6dp"
+        android:text="Coût"
+        android:textAlignment="textStart"
+        android:textColor="@color/red"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/textCoût"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/drapp"
+        android:paddingStart="20dp"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="15dp"
+        android:paddingBottom="15dp"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="210dp"
+        android:layout_height="63dp"
+        android:layout_below="@id/textView"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="55dp"
+        android:background="@color/red"
+        android:backgroundTint="#DD0C0C"
+        android:gravity="center"
+        android:paddingVertical="10dp"
+        android:paddingStart="30dp"
+        android:paddingEnd="40dp"
+        android:shadowColor="@color/red"
+        android:text="Calculer"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>
